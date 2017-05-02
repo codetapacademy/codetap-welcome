@@ -1,0 +1,6 @@
+.title-wrapper
+  .title-content
+    each content, key in data.section
+      label.title-label(for=`radio-${key}`)
+        h1=content.title
+        h2=content.subtitle
