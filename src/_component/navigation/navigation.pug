@@ -1,0 +1,7 @@
+.navigation-wrapper
+  .navigation-content
+    each content, key in data.section
+      label.navigation-label(for=`radio-${key}`)
+        .navigation-button=content.title
+        .navigation-icon
+          span(class=`codetap-${content.icon}`)
