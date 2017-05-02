@@ -1,0 +1,9 @@
+.icon-wrapper
+  .icon-content
+    each content in data.section
+      span.icon
+        span(class=`codetap-${content.icon}`)
+    each content in data.section
+      a.icon-link(href=content.href)
+        span.icon-title!=`Click <b><i>${content.title}</i></b> to visit`
+        span.codetap-new-tab
