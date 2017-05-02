@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    //- Check to see if there is a value for the first element
+    if data.section[0]
+      if data.section[0].title
+        title=`${data.section[0].title} - ${data.section[0].subtitle}` 
+      if data.section[0].description
+        meta(content=data.section[0].description, name="description")
+    if config.entry.css.external
+      link(rel="stylesheet", href="style.css")
+  body
+    block content

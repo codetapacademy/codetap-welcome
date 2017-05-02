@@ -1,0 +1,9 @@
+extends _layout/main
+
+block content
+  .content
+    each content, key in data.section
+      if key === 0
+        input.navigation-input(type="radio", name="active", id=`radio-${key}` checked="checked")
+      else
+        input.navigation-input(type="radio", name="active", id=`radio-${key}`)
