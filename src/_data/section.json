@@ -1,0 +1,30 @@
+[
+  {
+    "title": "CodeTap",
+    "href": "/codetap",
+    "subtitle": "Convert to front-end",
+    "description": "Are you stuck in your current job with little hope for the better? Become a front-end developer with ease now.",
+    "icon": "embed2"
+  },
+  {
+    "title": "Pug Starter",
+    "href": "/pug-starter",
+    "subtitle": "Start building websites like a PRO with little to no knowledge",
+    "description": "All you need is some basic understanding of HTML and CSS to get started with your first projects or no knowledge at all",
+    "icon": "switch"
+  },
+  {
+    "title": "My Resume",
+    "href": "/my-resume",
+    "subtitle": "Your very first project that matter",
+    "description": "Let's discover HTML and CSS together while building a fast, quick and ultra awesome resume",
+    "icon": "user-plus"
+  },
+  {
+    "title": "Quick Blog",
+    "href": "/quick-blog",
+    "subtitle": "The starter recipe for multi-page websites",
+    "description": "Build your blog from scratch and be proud to be among the quickest and fastest in the world. There is no blog quicker than Quick Blog that we know of.",
+    "icon": "blogger"
+  }
+]
