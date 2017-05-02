@@ -1,0 +1,23 @@
+.description-wrapper {
+  @extend %wrapper;
+
+  order: 2;
+}
+
+.description-content {
+  @extend %content;
+
+  background-image: radial-gradient(ellipse, $colour-porche, $colour-brick-red);
+}
+
+.description-paragraph {
+  position: absolute;
+  transition: 0.2s;
+  transition-delay: 0.1s;
+  left: 100%;
+  right: -100%;
+  color: $colour-white;
+  font-size: 3.8vmin;
+  padding: 5vmin;
+  text-align: center;
+}
