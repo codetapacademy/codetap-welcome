@@ -1,0 +1,7 @@
+//- Loop through the setion array
+each content, key in data.section
+  //- if it is the first elemnt with key 0 make it checked
+  if key === 0
+    input.navigation-input(type="radio", name="active", id=`radio-${key}` checked="checked")
+  else
+    input.navigation-input(type="radio", name="active", id=`radio-${key}`)
