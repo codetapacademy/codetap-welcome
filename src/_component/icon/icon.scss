@@ -1,0 +1,41 @@
+.icon-wrapper {
+  @extend %wrapper;
+  order: 1;
+}
+
+.icon-content {
+  @extend %content;
+  background-image: radial-gradient(ellipse, $colour-scooter, $colour-port-gore);
+}
+
+.icon {
+  transition: 0.3s;
+  transition-delay: 0.2s;
+  position: absolute;
+  transform: rotate(-90deg);
+  left: -100%;
+  right: 100%;
+  font-size: 30vmin;
+  color: $colour-white;
+  text-align: center;
+}
+
+.icon-title {
+  padding-right: 0.5rem;
+}
+
+.icon-link {
+  color: $colour-white;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.2s;
+  position: absolute;
+  bottom: 1vmin;
+  right: 100%;
+  left: 100%;
+  font-size: 3.5vmin;
+
+  &:hover {
+    color: $colour-black;
+  }
+}
