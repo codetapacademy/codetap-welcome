@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "gulp dev",
+    "start": "gulp dev",
     "prod": "gulp build --production",
     "deploy": "gulp build --production && gulp deploy && gulp clean:ghpages",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,6 +29,7 @@
       ]
     },
     "render": {
+      "sourceFileChange": false,
       "url": {
         "//": "this is recommended to avoid Linux/Windows capitalization issue",
         "htmlExtensionOn": false,
@@ -38,8 +40,8 @@
       "cssExternal": "style**.{scss,sass}",
       "cssInline": "inline**.{scss,sass}",
       "css": {
-        "inline": true,
-        "external": false
+        "inline": false,
+        "external": true
       }
     }
   },
@@ -61,16 +63,17 @@
   "homepage": "https://github.com/marianzburlea/pug-starter#readme",
   "devDependencies": {
     "autoprefixer": "^6.7.5",
-    "babel-core": "^6.23.1",
-    "babel-eslint": "^7.1.1",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.1.2",
     "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.18.8",
     "eslint": "^3.16.1",
     "foldero": "^0.1.1",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-cached": "^1.1.1",
     "gulp-changed": "^2.0.0",
+    "gulp-changed-in-place": "^2.2.0",
     "gulp-debug": "^3.1.0",
     "gulp-gh-pages": "^0.5.4",
     "gulp-if": "^2.0.2",

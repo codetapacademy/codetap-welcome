@@ -2,6 +2,7 @@
 
 import path from 'path';
 import autoprefixer from 'autoprefixer';
+import { printError, fixWindows10GulpPathIssue } from './util/util';
 
 const sass = ({
   gulp,
@@ -38,7 +39,12 @@ const sass = ({
           path.join(dir.source, dir.component)
         ]
       }))
-      .on('error', plugins.sass.logError)
+      .on('error', function(error) {
+        plugins.sass.logError;
+        browserSync.notify(printError(error), 25000);
+        console.log(error);
+        this.emit('end');
+      })
       .pipe(plugins.postcss([
         autoprefixer({
           browsers: [
@@ -47,9 +53,18 @@ const sass = ({
             'safari 5',
             'ios 6',
             'android 4'
-          ]
+          ],
+          // turn off notification for IE grid support
+          grid: false
         })
       ]))
+
+      // Fix for Windows 10 and gulp acting crazy
+      .pipe(plugins.rename(file => {
+        const dest = taskTarget;
+        fixWindows10GulpPathIssue({file, dest, plugins, config})
+      }))
+
       .pipe(plugins.sourcemaps.write('./'))
       .pipe(gulp.dest(taskTarget))
       .pipe(browserSync.stream({match: '**/*.css'}));
