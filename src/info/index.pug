@@ -3,52 +3,147 @@ html
   head
     title How to connect with CodeTap
     style.
-        html, body {
-        height: 100%;
+        * {
+            margin: 0;
+            padding: 0;
         }
-        body{
-        display: flex;
-        flex-wrap: wrap;
-        /* flex-direction: column; */
-        align-items: center;
-        justify-content: space-around;
-        background-color: lightskyblue;
+        html, body {
+            height: 100%;
+            background-color: lightskyblue;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            justify-content: space-around;
+            flex-grow: 1;
         }
         .info-card {
-        border: 0.2rem solid black;
-        padding: 1rem;
-        border-radius: 1rem;
-        min-width: 45vw;
-        text-align: center;
-        background-color: #fff;
+            border: 0.2vmin solid black;
+            padding: 1vmin;
+            border-radius: 1vmin;
+            width: 45vw;
+            text-align: center;
+            background-color: #fff;
+            margin: 1vmin 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         h1 {
-        font-size: 4vmin;
-        color: #B21212;
+            font-size: 7vmin;
+            text-align: center;
+            padding: 0.5vmin 0;
+            letter-spacing: 0.5vmin;
+            font-weight: bold;
+        }
+        h2 {
+            color: #cc0000;
+            font-size: 4vmin;
+        }
+        p {
+            font-size: 2.5vmin;
         }
         a {
-        font-size: 3vmin;
-        color: #0971B2;
-        text-decoration: none;
-        padding: 0.2rem;
-        border-bottom: 0.1rem solid #0971B2;
+            font-size: 3vmin;
+            color: #0971B2;
+            text-decoration: none;
+            padding: 0.3vmin;
+            border-bottom: 0.1vmin solid #0971B2;
         }
   body
-    .info-card
-      h1 CodeTap on Facebook
-      a(href='https://facebook.com/codetap') Get me to CodeTap on Facebook
-    .info-card
-      h1 CodeTap on YouTube
-      a(href='http://codetap.io/youtube') Get me to CodeTap on YouTube
-    .info-card
-      h1 CodeTap content nicely organized in Playlists
-      a(href='https://youtube.com/codetap/playlists') Get me to CodeTap PlayList on YouTube
-    .info-card
-      h1 CodeTap Live YouTube
-      a(href='http://codetap.io/live') Get me to CodeTap Live feed so I can chat like a pro
-    .info-card
-      h1 Support CodeTap on Patreon
-      a(href='http://patreon.com/codetap') For as little as $1 per month help CodeTap Community
-    .info-card
-      h1 CodeTap on GitHub
-      a(href='http://github.com/codetapio') Browse all the open source projects of CodeTap on GitHub
+    -
+        const dataList = [
+            {
+                title: "YouTube Live",
+                description: "FaceBook is 720p live, YouTube is 1080p live, better quality and you can chat on live screen",
+                link: {
+                    href: "http://codetap.io/live",
+                    text: "Y'all, can you see me chatting?"
+                }
+            },
+            {
+                title: "Live Call CodeTap",
+                description: "Join the call through Zoom, available on all platforms",
+                link: {
+                    href: "http://codetap.io/call",
+                    text: "I got something to ask, can you hear me?"
+                }
+            },
+            {
+                title: "Facebook",
+                description: "Like and Follow CodeTap on Facebook and meet with 3000+ others just like you",
+                link: {
+                    href: "https://facebook.com/codetap",
+                    text: "Get me to CodeTap on Facebook"
+                }
+            },
+            {
+                title: "Facebook Group",
+                description: "Join CodeTap Group on Facebook where you can create posts to get helped by the CodeTap Community or return the favour",
+                link: {
+                    href: "https://facebook.com/groups/codetap",
+                    text: "Hell ya! CodeTap Group on Facebook"
+                }
+            },
+            {
+                title: "YouTube",
+                description: "FREE amazing quality up to 4K ULTRA HD 60fps",
+                link: {
+                    href: "http://codetap.io/youtube",
+                    text: "For realz? Count me in 100%"
+                }
+            },
+            {
+                title: "YouTube Playlists",
+                description: "All the content CodeTap has to offer nicely organize in playlists, by project, step by step, for you to consume easier",
+                link: {
+                    href: "https://youtube.com/codetap/playlists",
+                    text: "Boom! I want to hit a playlist"
+                }
+            },
+            {
+                title: "Patreon",
+                description: "For as little as $1 per month help CodeTap Community",
+                link: {
+                    href: "http://patreon.com/codetap",
+                    text: "I'm rich, not cheap and got at least $1"
+                }
+            },
+            {
+                title: "GitHub",
+                description: "Browse all the open source projects of CodeTap on GitHub",
+                link: {
+                    href: "http://github.com/codetapio",
+                    text: "Open source public project just for your taste"
+                }
+            },
+            {
+                title: "Twitter",
+                description: "Quickly stay on top of the news with CodeTap",
+                link: {
+                    href: "http://twitter.com/codetapio",
+                    text: "Tweet, Tweet, CodeTap"
+                }
+            },
+            {
+                title: "Instagram",
+                description: "Pictures, Movies and more just for you in your favorite app",
+                link: {
+                    href: "http://instagram.com/codetapio",
+                    text: "Instagram 4 life, let me in CodeTap"
+                }
+            },
+        ]
+    h1 http://codetap.io/info
+    .list
+        each card in dataList
+            .info-card
+                h2=card.title
+                p=card.description
+                a(href=card.link.href)=card.link.text
