@@ -26,5 +26,12 @@
     "subtitle": "The starter recipe for multi-page websites",
     "description": "Build your blog from scratch and be proud to be among the quickest and fastest in the world. There is no blog quicker than Quick Blog that we know of.",
     "icon": "blogger"
+  },
+  {
+    "title": "Pug Starter",
+    "href": "https://github.com/marianzburlea/pug-starter",
+    "subtitle": "The starter recipe for single or multi-page websites",
+    "description": "Build your awesome projects quicker or start prototypes",
+    "icon": "blogger"
   }
 ]
