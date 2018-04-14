@@ -168,6 +168,6 @@ html
     .list
         each card in dataList
             .info-card
-                h2=card.title
+                h2!=card.title
                 p=card.description
                 a(href=card.link.href)=card.link.text
