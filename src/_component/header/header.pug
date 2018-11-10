@@ -1,7 +1,23 @@
 .header__wrapper
   .header__action-message
-    | Hurry! 80% PreLaunch discount ends in:
+    //- | Hurry! 80% PreLaunch discount ends in:
+    | Grăbește-te! 80% Reducere se termină în:
   .header__time-left
-    | 22:23:12
   
-  a.header__action-label(href="https://courses.codetap.io") Start Coding Like a PRO 
+  a.header__action-label(href="https://courses.codetap.io") Începe-ți viața de Programator PRO 
+  script.
+    var headerTimeLeft = document.querySelector('.header__time-left');
+    var timeToEnd = '2018-11-12 17:00';
+    var date = new Date(timeToEnd).getTime();
+    var now  = Date.now();
+    var timerValue = Math.abs(date - now);
+    var interval = setInterval(function() {
+      timerValue-=1000;
+      var seconds = Math.floor(timerValue / 1000) % 60;
+      var minutes = Math.floor(timerValue / (1000 * 60)) % 60;
+      var hours   = Math.floor(timerValue / (1000 * 60 * 60)) % 24;
+      var days    = Math.floor(timerValue / (1000 * 60 * 60 * 24));
+
+      var timeString = `${days} zile ${hours}:${minutes}:${seconds}`;
+      headerTimeLeft.textContent = timeString;
+    }, 1000)
