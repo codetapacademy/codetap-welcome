@@ -1,10 +1,10 @@
 .header__wrapper
   .header__action-message
     //- | Hurry! 80% PreLaunch discount ends in:
-    | Grăbește-te! 80% Reducere se termină în:
+    | Grăbește-te! Reducerea de #[strong 80%] se termină în:
   .header__time-left
   
-  a.header__action-label(href="https://courses.codetap.io") Începe-ți viața de Programator PRO 
+  a.header__action-label(href="https://courses.codetap.io") Începe-ți viața de Programator PROfesionist
   script.
     var headerTimeLeft = document.querySelector('.header__time-left');
     var timeToEnd = '2018-11-12 17:00';
@@ -21,3 +21,7 @@
       var timeString = `${days} zile ${hours}:${minutes}:${seconds}`;
       headerTimeLeft.textContent = timeString;
     }, 1000)
+
+.header__wrapper--white
+  .header__info Folosește #[strong GOLD] pentru a aplica cuponul de reducere
+  h2 Click pe butonul de redare (play) pentru a urmări emisiunea în direct.
