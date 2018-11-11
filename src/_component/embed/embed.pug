@@ -1,9 +1,28 @@
+-
+  //- the last one is the one to be live
+  var movieIdList = ['lu3oVcBTAhM', 'Cb86YBfgeEU'];
+  const last = movieIdList[movieIdList.length - 1];
+  const allButLast = movieIdList.slice(0, -1);
+h2 Istoric emisiuni trecute
+.movie-list
+  each movie in allButLast
+    .embed-youtube
+      iframe(
+        class="embed-youtube-iframe"
+        width="100%" 
+        height="100%" 
+        src=`https://www.youtube.com/embed/${movie}`
+        frameborder="0" 
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+      )
+h2 Click pe butonul de redare (play) pentru a urmări emisiunea în direct.
 .embed-youtube
   iframe(
     class="embed-youtube-iframe"
     width="100%" 
     height="100%" 
-    src="https://www.youtube.com/embed/45B8bximUwk" 
+    src=`https://www.youtube.com/embed/${last}`
     frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen

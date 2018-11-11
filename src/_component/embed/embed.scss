@@ -9,3 +9,8 @@
   top: 0;
   left: 0;
 }
+
+.movie-list {
+  display: grid;
+  grid-template-columns: minmax(200px, 500px)
+}
