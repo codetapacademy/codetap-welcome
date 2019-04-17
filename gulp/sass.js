@@ -13,14 +13,21 @@ const sass = ({
   browserSync
 }) => {
   const dir = config.directory;
-  const entry = config.entry;
-  const cssPath = [];
+  const { entry } = config;
+  let cssPath = [];
 
   if (entry.css.external) {
     cssPath.push(path.join(dir.source, entry.cssExternal));
   }
   if (entry.css.embed) {
     cssPath.push(path.join(dir.source, entry.cssEmbed));
+  }
+
+  if (entry.cssModular) {
+    cssPath = [
+      `./${dir.source}/**/*.{scss,sass}`,
+      `!./${dir.source}/**/\_*.{scss,sass}`
+    ]
   }
 
   // Compile sass
@@ -66,7 +73,7 @@ const sass = ({
       }))
 
       .pipe(plugins.sourcemaps.write('./'))
-      .pipe(gulp.dest(taskTarget))
+      .pipe(gulp.dest(taskTarget.replace(/\_/, '')))
       .pipe(browserSync.stream({match: '**/*.css'}));
   });
 };
