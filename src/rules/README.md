@@ -13,7 +13,7 @@ Only when you’ve run out of ideas, do a quick description iterating all your r
 Learn while you practice
   Watching too many courses without setting a real world goal and doing progress about it is usually the thinkers trap. In most cases it’s a waste of time. The basic idea is to define a project and it’s requirements, even if you don’t know how to do it. Break down requirements into smaller chunks until you can’t break them down anymore. Identify which ones you know how to do and start with them. The tasks that you don’t know how to do are going to tell you which articles, courses or other resources you want to tap into them and start learning more. As soon as a course gives you the answer to one of your tasks, stop learning and solve that task. Repeat this process until all tasks are done.
 Communicate and be nice
-There is a way where you start watching all the free lessons on CodeTap, which doesn’t require any One to One or Mentor interaction at all. You’re better off to leave comments anyway so don’t forget that. Simply visit http://codetap.io/youtube or http://codetap.io/start and start watching the playlists in reverse order, the oldest first. Most CodeTap students have done these ones:
+There is a way where you start watching all the free lessons on CodeTap, which doesn’t require any One to One or Mentor interaction at all. You’re better off to leave comments anyway so don’t forget that. Simply visit http://codetap.academy/youtube or http://codetap.academy/start and start watching the playlists in reverse order, the oldest first. Most CodeTap students have done these ones:
 
 
 Before we start coding
@@ -25,7 +25,7 @@ Quick Blog
   The second way, follow-up to the first one is to get a mentor. I, Marian Zburlea, the founder of CodeTap, challenge you firstly to show that you’re worthy of my help. In order to be able to receive my mentoring you MUST:
 JOIN the CodeTap group at https://facebook.com/groups/codetap
 Support CodeTap on Patreon with at least $1 per month. https://www.patreon.com/codetap/memberships I don’t even want to hear about it, $1 is peanuts compared to what you’re getting. I want to see this minimum effort from you. The minimum contribution after you get a job is $25, otherwise we shake hands and wonder different paths.
-Subscribe to CodeTap on YouTube at http://codetap.io/youtube and make sure you clicked on the notification bell as well
+Subscribe to CodeTap on YouTube at http://codetap.academy/youtube and make sure you clicked on the notification bell as well
 Like CodeTap page and make sure to update the view notifications setting https://www.facebook.com/codetap/
 DO all three beginner PLAYLISTS on CodeTap on YouTube (Before we start coding, Everyone can code, Learn to code like a PRO for beginners)
  For each movie that you watch, you MUST drop at least one comment.   This is how you develop your skills as a team player and good communicator, which companies strive for. The comment should not be like “Marian, you’re awesome, let me kiss your ass some more” although feel free to thank me if you like. If you thank me, I’ll really appreciate however you MUST drop at least one more comment that is on the subject of the movie. This can contain:
